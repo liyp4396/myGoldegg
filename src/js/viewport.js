@@ -1,0 +1,1 @@
+!function(){function a(){var dw=650;var viewport=document.getElementById('viewport');viewport.setAttribute('content', 'width='+dw+', user-scalable=no')}var b=null;window.addEventListener('resize',function(){clearTimeout(b);b=setTimeout(a, 600)},!1);a()}(window);

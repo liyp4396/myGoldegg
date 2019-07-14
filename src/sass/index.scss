@@ -1,0 +1,397 @@
+@charset 'utf-8';
+
+// 头部
+.golden-header{
+    position: relative;
+    width: 640px;
+    height: 306px;
+    background: url(../img/Gegg_header.png) no-repeat center;
+    background-size: cover;
+    margin: 0 auto;
+    .arrow{
+       height: 100px;
+       background: linear-gradient(to bottom,rgba(33,0,0,.9), rgba(33,0,0,.1));
+       span{
+           display: block;
+           font-size: 30px;
+           color: #fff;
+           padding: 20px 40px;
+       }
+    }
+    .stop-music{
+        color: #fff;
+        font-size: 66px;
+        position: absolute;
+        top: 105px;
+        right: 90px;
+        font-weight: bold;
+        animation: rotateA 2s ease infinite normal;
+    }
+    .play-music{
+        color: #fff;
+        font-size: 66px;
+        position: absolute;
+        top: 105px;
+        right: 90px;
+        font-weight: bold;
+        display: none;
+    }
+    .middle-musicicon{
+        color: #fff;
+        font-size: 20px;
+        position: absolute;
+        top: 120px;
+        right: 80px;
+        font-weight: bold;
+        animation: rotateB 1s ease infinite normal;
+       
+    }
+    .top-musicicon{
+        color: #fff;
+        font-size: 18px;
+        position: absolute;
+        top: 70px;
+        right: 85px;
+        font-weight: bold;
+        animation: rotateC 1s ease infinite normal;
+    }
+    .botton-musicicon{
+        color: #fff;
+        font-size: 18px;
+        position: absolute;
+        top: 130px;
+        right: 50px;
+        font-weight: bold;
+        animation: rotateD 1s ease infinite normal;
+    }
+}
+//内容
+.golden-main{
+    width: 640px;
+    height: 813px;
+    background: url(../img/Satin_top.png) no-repeat center;
+    background-color: brown;
+    margin: 0 auto;
+    .golden-main-bg{
+        width: 643px;
+        height: 661px;
+        background: url(../img/curtain.png) no-repeat center;
+        .count-time{
+            text-align: center;
+            color:yellow;
+            font-size: 20px;
+        }
+        .golden-gegg{
+            overflow: hidden;
+            padding-top: 140px;
+            img{
+                float: left;
+                width: 200px;
+                height: 233px;
+                // background: url(../img/Gegg.png) no-repeat;
+                background-size: cover;
+            }
+        }
+        .next-btn{
+            width: 400px;
+            height: 100px;
+            border: 1px solid burlywood;
+            margin: 0 auto;
+            margin-top: 120px;
+            border-radius: 70px;
+            text-align: center;
+            font-size: 30px;
+            color: burlywood;
+            line-height: 100px;
+            font-weight: bold;
+            background: linear-gradient(to bottom, rgba(140, 146, 48, 0.5), rgba(33,0,0,.8), rgba(140, 146, 48, 0.5))
+        }
+    }
+     //锤子
+    .hammer-left{
+        width: 117px;
+        height: 223px;
+        background: url(../img/chuizi.png) no-repeat;
+        position: absolute;
+        top: 555px;
+        left: 190px;
+        transform: rotate(-30deg);
+        animation: hammerM 1s ease 1;
+    }
+    //锤子移动
+    .hammer-right{
+        width: 117px;
+        height: 223px;
+        background: url(../img/chuizi.png) no-repeat;
+        position: absolute;
+        top: 555px;
+        left: 360px;
+        transform: rotate(30deg);
+        animation: hammerR 1s ease 1;
+    }//气泡移动
+    .gas-left{
+        display: none;
+        width: 115px;
+        height: 110px;
+        position:absolute;
+        top: 580px;
+        left: 190px;
+        img{
+            width: 115px;
+        height: 110px;
+        }
+    }
+    //框
+    .popup{
+        display: none;
+        width: 640px;
+        height: 670px;
+        color: red;
+        font-size: 46px;
+        text-align: center;
+        font-weight: bold;
+        // margin-top: -500px;
+       position: relative;
+       top: -500px;
+       left: 0px;
+        .win-tip{
+            width: 570px;
+            height: 562px;
+            margin: 0 auto;
+            background: url(../img/not_winning.png) no-repeat center;
+            z-index: 10;
+        }
+        //隐藏框
+        .wintip-hide{
+        animation: hideP 2s ease 1;
+        } //隐藏蛋
+        .egg-hide{
+            animation: hideE 2s ease 1;
+        }
+    }
+}
+// 奖品 规则
+.f-wrap{
+    width: 640px;
+    height: 916px;
+    background: url(../img/Satin_min.png) no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    //奖品
+    .prize-wrap{
+        width: 600px;
+        margin: 0 auto;
+        background-color: burlywood;
+        position: relative;
+        // overflow: hidden;
+        .prizeTip{
+            width: 143px;
+            height: 45px;
+            background: url(../img/biaoqian.png) no-repeat;
+            color:gold;
+            font-size: 20px;
+            line-height: 49px;
+            text-align: center;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            left: -7px;
+        }
+        .prizePrizeList{
+            width:30.8rem;
+          overflow: hidden;
+          margin: auto;
+            ul{
+                width:30.4rem;
+                border: 2px solid #c55a38;
+                margin: 3.3rem auto 0.5rem auto;
+                li{
+                    width:30.4rem;
+                    height: 2.4rem;
+                    font-size: 2rem;
+                    text-indent: 1.5em;
+                    line-height: 2.4rem;
+                    color: forestgreen;
+                    span{
+                        display: inline-block;
+                        width:70%;
+                        text-align: center;
+                    }
+                    &:nth-child(2n-1){
+                        background-color: #f5b255;
+                      }
+                }
+            }
+        }
+    }
+    //规则
+    .rude-wrap{
+        width: 600px;
+        margin: 0 auto;
+        background-color: burlywood;
+        position: relative;
+        margin-top: 40px;
+        .rudeTip{
+            width: 143px;
+                height: 45px;
+                background: url(../img/biaoqian.png) no-repeat;
+                color:gold;
+                font-size: 20px;
+                line-height: 49px;
+                text-align: center;
+                font-weight: bold;
+                position: absolute;
+                top: 0;
+                left: -7px;
+        }
+        .ruleList{
+            width:30.8rem;
+            overflow: hidden;
+            margin: auto;
+            ul{
+                width:30.4rem;
+                margin: 3.3rem auto 0.5rem auto;
+                li{
+                    font-size: 18px;
+                    margin-top: 0.2rem;
+                    text-align: justify;
+                    color: forestgreen;
+                }
+            }
+        }
+    }
+    .content_bottom{
+        width: 640px;
+        height: 266px;
+        margin: 0 auto;
+        background: url(../img/Satin_bottom.png) no-repeat;
+        background-size: cover;
+    }
+}
+
+
+//音乐动画
+@keyframes rotateA{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(-50deg);
+    }
+    100%{
+        transform: rotate(0deg);
+       
+    }
+}
+@keyframes rotateB{
+    0%{
+        transform: rotate(40deg) scale(0.4) translate(0,0);
+        opacity: 1;
+    }
+    25%{
+        transform: rotate(-20deg) scale(0.9) translate(5px,-5px);
+        opacity: 0.8;
+    }
+    50%{
+        transform: rotate(0deg) scale(1.4) translate(10px,-10px);
+        opacity: 0.6;
+    }
+    75%{
+        transform: rotate(-20deg) scale(1.6) translate(13px,-13px);
+        opacity: 0.4;
+    }
+    100%{
+        transform: rotate(0deg) scale(2.0) translate(17px,-17px);
+        opacity: 0;
+    }
+}
+@keyframes rotateC{
+    0%{
+        transform: rotate(40deg) scale(0.4) translate(0,0);
+        opacity: 1;
+    }
+    25%{
+        transform: rotate(-20deg) scale(0.7) translate(-2px,2px);
+        opacity: 0.8;
+    }
+    50%{
+        transform: rotate(0deg) scale(1.0) translate(-6px,6px);
+        opacity: 0.6;
+    }
+    75%{
+        transform: rotate(-20deg) scale(1.4) translate(-8px,8px);
+        opacity: 0.4;
+    }
+    100%{
+        transform: rotate(0deg) scale(1.7) translate(-12px,12px);
+        opacity: 0;
+    }
+}
+@keyframes rotateD{
+    0%{
+        transform: rotate(40deg) scale(0.4) translate(0,0);
+        opacity: 1;
+    }
+    25%{
+        transform: rotate(-30deg) scale(0.7) translate(-5px,5px);
+        opacity: 0.8;
+    }
+    50%{
+        transform: rotate(0deg) scale(1.0) translate(-8px,12px);
+        opacity: 0.6;
+    }
+    // 75%{
+    //     transform: rotate(-30deg) scale(1.4) translate(-11px,11px);
+    //     opacity: 0.4;
+    // }
+    100%{
+        transform: rotate(0deg) scale(1.7) translate(-3px,25px);
+        opacity: 0;
+    }
+}
+//锤子移动
+@keyframes hammerM{
+    0%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-30deg);
+    }
+}
+@keyframes hammerR{
+    0%{
+        transform: rotate(30deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(30deg);
+    }
+}
+//隐藏弹框
+@keyframes hideP{
+    0%{
+        transform: translate(0, 0)  scale(1) ;
+    }
+    70%{
+        transform: translate(0, 195px) scale(0.3) ;
+    }
+    100%{
+        transform: translate(0, 300px)  scale(0) ;
+    }
+}
+@keyframes hideE{
+    0%{
+        transform: translate(0, 0)  scale(1) ;
+    }
+    80%{
+        transform: translate(0, 0) scale(1) ;
+    }
+    100%{
+        transform: translate(0, -10px)  scale(0) ;
+    }
+}
